@@ -1,0 +1,30 @@
+{
+    "name": "project-name",
+    "dockerFile": "Dockerfile",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.pythonPath": "/usr/local/bin/python",
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": true,
+        "python.linting.flake8Args": [
+            "--ignore=E402",
+            "--max-line-length",
+            "120"
+        ],
+        "python.formatting.provider": "autopep8",
+        "python.formatting.autopep8Args": [
+            "--ignore",
+            "E402",
+            "--max-line-length",
+            "120"
+        ],
+        "[python]": {
+            "editor.formatOnSave": true
+        }
+    },
+    "extensions": [
+        "ms-python.python",
+        "ms-pyright.pyright"
+    ],
+    "postCreateCommand": "pip install -r requirements.txt"
+}
