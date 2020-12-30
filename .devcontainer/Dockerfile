@@ -16,6 +16,9 @@ RUN apt update \
     texlive-fonts-extra \
     texlive-extra-utils \
     latexmk \
+    liblog-log4perl-perl \
+    libyaml-tiny-perl \
+    libfile-homedir-perl \
     && apt autoremove -y \
     && apt clean -y \
     && rm -rf /var/lib/apt/lists/*
