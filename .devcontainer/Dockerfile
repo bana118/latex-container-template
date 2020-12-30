@@ -19,6 +19,7 @@ RUN apt update \
     liblog-log4perl-perl \
     libyaml-tiny-perl \
     libfile-homedir-perl \
+    liblog-dispatch-perl \
     && apt autoremove -y \
     && apt clean -y \
     && rm -rf /var/lib/apt/lists/*
