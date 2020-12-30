@@ -1,21 +1,23 @@
 FROM debian:buster-slim
 
 # Reference https://texwiki.texjp.org/?Linux%2FLinux%20Mint#texlive
-# Full texlive package is texlive-full
+# If you use only Japanese fonts
+# use the following packages instead of tex-live-full to save space
+    # texlive-lang-japanese \
+    # texlive-luatex \
+    # texlive-latex-recommended \
+    # texlive-latex-extra \
+    # fonts-lmodern \
+    # texlive-xetex \
+    # latex-cjk-common \
+    # texlive-fonts-extra \
+    # texlive-extra-utils \
+    # latexmk \
 RUN apt update \
     && apt install -y --no-install-recommends \
     apt-utils \
     git \
-    texlive-lang-japanese \
-    texlive-luatex \
-    texlive-latex-recommended \
-    texlive-latex-extra \
-    fonts-lmodern \
-    texlive-xetex \
-    latex-cjk-common \
-    texlive-fonts-extra \
-    texlive-extra-utils \
-    latexmk \
+    texlive-full \
     liblog-log4perl-perl \
     libyaml-tiny-perl \
     libfile-homedir-perl \
