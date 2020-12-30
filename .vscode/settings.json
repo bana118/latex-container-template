@@ -10,6 +10,13 @@
         "latexmk (pLaTeX)"
       ]
     },
+    // LaTeX(pdfLaTeX) で書かれた文書のビルドレシピ
+    {
+      "name": "pdfLaTeX",
+      "tools": [
+        "latexmk (pdfLaTeX)"
+      ]
+    },
     // LaTeX(upLaTeX) で書かれた文書のビルドレシピ
     {
       "name": "upLaTeX",
@@ -38,6 +45,18 @@
       "name": "latexmk (pLaTeX)",
       "command": "latexmk",
       "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "latexmk (pdfLaTeX)",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
