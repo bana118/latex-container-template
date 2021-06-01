@@ -1,9 +1,6 @@
 {
     "name": "latex-remote-container-template",
     "dockerFile": "Dockerfile",
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-    },
     "extensions": [
         "james-yu.latex-workshop"
     ],
