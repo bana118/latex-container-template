@@ -2,6 +2,7 @@
     "name": "project-name",
     "dockerFile": "Dockerfile",
     "extensions": [
+        "ms-azuretools.vscode-docker",
         "james-yu.latex-workshop"
     ],
 }
