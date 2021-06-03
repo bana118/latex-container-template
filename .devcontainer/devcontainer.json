@@ -1,5 +1,5 @@
 {
-    "name": "latex-remote-container-template",
+    "name": "project-name",
     "dockerFile": "Dockerfile",
     "extensions": [
         "james-yu.latex-workshop"
